@@ -3,6 +3,9 @@ body{
     margin: 0px;
     /* max-height: 100%; */
 }
+h1{
+    text-align: center;
+}
 .bdy{
     width: 40%;
     position: relative;
@@ -63,5 +66,9 @@ img{
    object-fit: cover;
    width: 22%;
    height: 100%;
+}
+.imag3{
+    width: 3%;
+    left: 18%;
 }
 
