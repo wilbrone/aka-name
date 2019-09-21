@@ -1,7 +1,14 @@
+body{
+    background-color: #757575 !important;
+    margin: 0px;
+    /* max-height: 100%; */
+}
 .bdy{
     width: 40%;
-    border: solid;
     position: relative;
+}
+fieldset{
+    margin-left: 20px;
 }
 .field{
     border: none;
@@ -11,8 +18,9 @@
     transition: 0.5s;
 }
 .frm{
-    width: 90%;
+    /* width: 90%; */
     margin: 30px auto;
+    background-color: #ffffff;
 }
 .field:focus {
   border-bottom: 3px solid green;
