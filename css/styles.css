@@ -1,7 +1,59 @@
+.bdy{
+    width: 40%;
+    border: solid;
+    position: relative;
+}
 .field{
     border: none;
     border-bottom: 2px solid #2cc0c5;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
-form{
-    margin-top: 30px;
+.frm{
+    width: 90%;
+    margin: 30px auto;
 }
+.field:focus {
+  border-bottom: 3px solid green;
+}
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+button{
+    width: 100px;
+    float: right;
+}
+
+/* css for the floating images */
+img{
+    position: absolute;
+}
+.imag{
+    object-fit: none;
+
+    top: 0%;
+    left: 0%;
+    height: 50%;
+    width: 22%;
+    height: 100%;
+    object-position: 100% 0;
+
+    /* -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); */
+}
+.imag2{
+   top: 0%; 
+   right: 0%;
+   object-fit: cover;
+   width: 22%;
+   height: 100%;
+}
+
