@@ -25,12 +25,12 @@ function formValidate(){
   
       return false;
     }
-    if(MM=="" && MM<0 || MM>12){
+    if(MM=="" || MM<0 || MM>12){
       document.getElementById("crazyoutput").innerHTML = "Please Enter the Month you were born";
 
       return false;
     }
-    if(DD=="" && DD<0 || DD>31){
+    if(DD=="" || DD<0 || DD>31){
       document.getElementById("crazyoutput").innerHTML = "Please give your Day of Birth";
 
       return false;
