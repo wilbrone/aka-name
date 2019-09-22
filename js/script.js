@@ -1,62 +1,63 @@
 var dayName = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-var mName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-var fName = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-// var CC, YY, MM, d, name;
-  var year;
-  var MM;
-  var DD;
-  var gender;
+var maleName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+var femaleName = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+var year;
+var MM;
+var DD;
+var gender;
 
-  function compile(){
-      validate();
-     alert ("Your Akan name is " +calculateDay());
-      findGender();
-  }
+
+
+
 function validate(){
-    // assigning my data to variables
-  var year= document.getElementById("year").value;
-  var MM= document.getElementById("month").value;
-  var DD= document.getElementById("day").value;
-  var gender= document.querySelector('input[name="gender"]:checked').value;
+    // assigning my input data to the variables
+    var year= document.getElementById("year").value;
+    var MM= document.getElementById("month").value;
+    var DD= document.getElementById("day").value;
+    var gender= document.querySelector('input[name="gender"]:checked').value;
 
-  // calling the function that brings the name to be trigeered
-  calculateDay(gender, MM, year, DD);  
+    // invoking the function that brings the name to be trigeered
+    calculateDay(gender, MM, year, DD);  
 
-  // this is for validating that the fields are entered correctly
-  if(year==""){
-      alert("Enter valid year");
+    // this is for validating that the fields are entered correctly
+    if(year==""){
+      document.getElementById("crazyoutput").innerHTML = "Please give your Year of Birth";
+  
       return false;
-  }
-  if(month=="" || month<0 || month>12){
-      alert("Enter valid month");
+    }
+    if(MM=="" || MM<0 || MM>12){
+      document.getElementById("crazyoutput").innerHTML = "Please Enter the Month you were born";
+
       return false;
-  }
-  if(day=="" || day<0 || day>31){
-      alert("Enter valid day of birth");
+    }
+    if(DD=="" || DD<0 || DD>31){
+      document.getElementById("crazyoutput").innerHTML = "Please give your Day of Birth";
+
       return false;
-  }
-  if(gender[0].checked== false && gender[1].checked==false){
-      alert("Enter your gender");
+    }
+    if(gender[0].checked== false && gender[1].checked==false){
+      document.getElementById("crazyoutput").innerHTML = "Please give your Gender";
+
       return false;
-  }
-  else{
+    }
+    else{
       return true;
-  }
+    }
 }
 
 // this calculates the day and using that to get the akan name
 function calculateDay(gender, MM, year, DD){
-  console.log(DD);
+    console.log(DD);
 
-  var name="";
-  var date= new Date(year+ "/" +MM +"/" +DD);
-  console.log(date);
+    var name="";
+    var date= new Date(year+ "/" +MM +"/" +DD);
 
-  var day = date.getDay();
-  if (gender==="male"){
-      name=mName[day]
-  }else{
-      name=fName[day]
-  }
- return name;
+    var dayNumber = date.getDay();
+    if (gender==="male"){
+      name=maleName[dayNumber];
+    }else{
+      name=femaleName[dayNumber];
+    }
+    document.getElementById("crazyoutput").innerHTML = name;
+    return name;
 }
