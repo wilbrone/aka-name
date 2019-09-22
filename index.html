@@ -21,18 +21,18 @@
                 <fieldset>
                     <legend>Date of Birth:</legend>
                     <label for="day">Day:</label><br>
-                    <input class="field" type="number" name="day" value="" placeholder="Day"><br><br>
+                    <input class="field" type="number" id="day" value="" placeholder="Day"><br><br>
                     <label for="month">Month</label><br>
-                    <input class="field" type="number" name="month" value="" placeholder="Month"><br><br>
+                    <input class="field" type="number" id="month" value="" placeholder="Month"><br><br>
                     <label for="year">Year</label><br>
-                    <input class="field" type="number" name="year" value="" placeholder="Year">
+                    <input class="field" type="number" id="year" value="" placeholder="Year">
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>Please give your Gender:</legend>
-                    <input type="radio" name="gender" value="male" checked> Male<br>
+                    <input type="radio" name="gender" value="male"> Male<br>
                     <input type="radio" name="gender" value="female"> Female
-                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-info" onclick="validate()">Info</button>
                 </fieldset>
             </form>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" disabled></textarea>
