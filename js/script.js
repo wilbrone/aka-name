@@ -1,25 +1,26 @@
-var dayName = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
+var dayName = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 var mName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var fName = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var CC, YY, MM, d, name;
+// var CC, YY, MM, d, name;
   var year;
-  var month;
-  var day;
-  var gn;
+  var MM;
+  var DD;
+  var gender;
+
   function compile(){
       validate();
      alert ("Your Akan name is " +calculateDay());
       findGender();
   }
 function validate(){
-  this.calculateDay(gender)  
     // assigning my data to variables
   var year= document.getElementById("year").value;
-  var month= document.getElementById("month").value;
-  var day= document.getElementById("day").value;
+  var MM= document.getElementById("month").value;
+  var DD= document.getElementById("day").value;
   var gender= document.querySelector('input[name="gender"]:checked').value;
-  console.log(day);
-  console.log(gender);
+
+  // calling the function that brings the name to be trigeered
+  calculateDay(gender, MM, year, DD);  
 
   // this is for validating that the fields are entered correctly
   if(year==""){
@@ -35,7 +36,7 @@ function validate(){
       return false;
   }
   if(gender[0].checked== false && gender[1].checked==false){
-      alert("Enter your gender")
+      alert("Enter your gender");
       return false;
   }
   else{
@@ -43,12 +44,14 @@ function validate(){
   }
 }
 
-function calculateDay(gender){
+// this calculates the day and using that to get the akan name
+function calculateDay(gender, MM, year, DD){
+  console.log(DD);
+
   var name="";
-  // year=
-  // MM=
-  // DD=
   var date= new Date(year+ "/" +MM +"/" +DD);
+  console.log(date);
+
   var day = date.getDay();
   if (gender==="male"){
       name=mName[day]
