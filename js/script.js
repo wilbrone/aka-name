@@ -9,7 +9,7 @@ var gender;
 
 
 
-function validate(){
+function formValidate(){
     // assigning my input data to the variables
     var year= document.getElementById("year").value;
     var MM= document.getElementById("month").value;
@@ -17,7 +17,7 @@ function validate(){
     var gender= document.querySelector('input[name="gender"]:checked').value;
 
     // invoking the function that brings the name to be trigeered
-    calculateDay(gender, MM, year, DD);  
+    getDayofBirth(gender, MM, year, DD);  
 
     // this is for validating that the fields are entered correctly
     if(year==""){
@@ -46,7 +46,7 @@ function validate(){
 }
 
 // this calculates the day and using that to get the akan name
-function calculateDay(gender, MM, year, DD){
+function getDayofBirth(gender, MM, year, DD){
     console.log(DD);
 
     var name="";
