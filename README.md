@@ -15,9 +15,9 @@ The user enters the fields given that the fields are filled correctly the name w
 When the fields ar not correctly field in there will be an error message
 but if all the fields are filled correctly and the gender is provided then the name assignes to them will be printed out.
 
-![this is what should appear if all is okay](images/screenshot.png)this is what should appear if all is okay
+![this is what should appear if all is okay](images/screenshot.png)This is what should appear if all is okay
 
-![this is an example of what will happen when a field is left empty](images/screen.png)
+![this is an example of what will happen when a field is left empty](images/screen.png)This is an example of what will happen when a field is left empty
 
 
 ## Support and contact details
