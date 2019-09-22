@@ -10,10 +10,9 @@ h1{
 .bdy{
     width: 40%;
     position: relative;
+    background-color: #ffffff;
 }
-fieldset{
-    margin-left: 20px;
-}
+
 .field{
     border: none;
     border-bottom: 2px solid #2cc0c5;
@@ -24,7 +23,6 @@ fieldset{
 .frm{
     /* width: 90%; */
     margin: 30px auto;
-    background-color: #ffffff;
 }
 .field:focus {
   border-bottom: 3px solid green;
@@ -76,6 +74,9 @@ img{
     max-width: 100%; 
     max-height: 50%; 
     text-align: center;
-    font-size: 2em;
-    font-style: bold;
+    font-size: 1.5em;
+}
+.result{
+    font-size: 1.7em;
+    font-weight: bold;
 }

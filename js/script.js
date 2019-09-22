@@ -61,3 +61,4 @@ function calculateDay(gender, MM, year, DD){
     document.getElementById("crazyoutput").innerHTML = name;
     return name;
 }
+
